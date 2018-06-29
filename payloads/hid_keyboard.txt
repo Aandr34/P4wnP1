@@ -46,14 +46,14 @@ function onKeyboardUp()
 {
 	# we need no initial keyboard delay, before starting the DuckyScript
 	# if this method gets called, we know the HID keyboard stack is usable
-
-	cat <<- EOF | duckhid
-		GUI r
-		DELAY 500
-		STRING notepad.exe
-		ENTER
-		DELAY 1000
-EOF
-	echo "Keyboard is running" | outhid
+	cat $wdir/DuckyScripts/FF_key.duck | duckhid
+#	cat <<- EOF | duckhid
+#		GUI r
+#		DELAY 500
+#		STRING notepad.exe
+#		ENTER
+#		DELAY 1000
+#EOF
+#	echo "Keyboard is running" | outhid
 }
 
